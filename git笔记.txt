@@ -1,0 +1,54 @@
+Git命令语句合集
+设置用户签名
+git config --global user.email “your@example.com”
+git config --global user.name “your name”
+初始化本地库
+git init
+添加文件到暂存区
+git add index.text
+添加一个单独文件夹存放在暂存区
+git add ceshi/
+把所有文件都存放在暂存区
+git add --all 或 git add . 
+使用vim编辑器创建文件
+vim 1.text
+进入编辑器按insert可以在编辑器中输入文字
+退出时先按Esc在输入 :wq 即可以把输入的文字保存后退出
+查看文件内的内容
+cat 1.text
+查看目录下的状态
+git status
+删除暂存区的某个文件
+git rm --cached 1.text
+把暂存区内容提交到本地库
+git commit -m “我的第一个版本”
+查看版本信息
+git log
+使用版本编号进行历史回退
+git reset --hard HEAD^ 
+查看所有的操作记录
+git reflog
+返回以前的任意版本
+git reset --hard 版本号码  （版本号码可以通过git reflog或git log查看）
+返回暂存区
+git reset --soft HEAD^
+撤销当前版本回到上一个版本
+git revert HEAD
+查询分支
+git branch
+创建分支
+git branch 分支名
+切换分支
+git checkout login
+合并分支
+git merge 分支名
+删除分支
+git branch -d 分支名
+远程与GitHub库连接
+git remote add origin 库的地址  (orgin是个别名可以写成任何名字)
+查看连接的远程库
+git remote -v
+移除远程库
+git remote remove orgin
+推送文件内容至仓库
+Git push origin master
